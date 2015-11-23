@@ -2,12 +2,14 @@
 etc/firmware/leia_pfp_470.fw
 etc/firmware/leia_pm4_470.fw
 etc/firmware/a225p5_pm4.fw
+
 # Keystore firmware
 vendor/firmware/keymaster/keymaster.b00
 vendor/firmware/keymaster/keymaster.b02
 vendor/firmware/keymaster/keymaster.mdt
 vendor/firmware/keymaster/keymaster.b01
 vendor/firmware/keymaster/keymaster.b03
+
 # Venus (media) firmware
 etc/firmware/venus.b01
 etc/firmware/venus.b03
@@ -16,6 +18,7 @@ etc/firmware/venus.b00
 etc/firmware/venus.b02
 etc/firmware/venus.b04
 etc/firmware/venus.mdt
+
 # Graphics firmware
 etc/firmware/a225_pm4.fw
 etc/firmware/a300_pm4.fw
@@ -23,11 +26,13 @@ etc/firmware/a330_pm4.fw
 etc/firmware/a225_pfp.fw
 etc/firmware/a300_pfp.fw
 etc/firmware/a330_pfp.fw
+
 # Camera firmware
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
 etc/firmware/cpp_firmware_v1_2_1.fw
+
 # NFC Firmware
 etc/firmware/Signedrompatch_v20.bin
 etc/firmware/Signedrompatch_v21.bin
@@ -146,3 +151,12 @@ vendor/lib/libsensor_user_cal.so
 # just in case
 vendor/lib/libsensor_lge_cal.so
 
+# ACDB
+etc/acdbdata/Bluetooth_cal.acdb
+etc/acdbdata/General_cal.acdb
+etc/acdbdata/Global_cal.acdb
+etc/acdbdata/Handset_cal.acdb
+etc/acdbdata/Hdmi_cal.acdb
+etc/acdbdata/Headset_cal.acdb
+etc/acdbdata/Speaker_cal.acdb
+etc/acdbdata/workspaceFile.qwsp
