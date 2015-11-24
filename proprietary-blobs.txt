@@ -68,7 +68,6 @@ vendor/lib/liboemcamera.so
 vendor/lib/libmmjpeg.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegehw.so
-vendor/lib/libI420colorconvert.so
 vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libchromatix_imx119_common.so
 vendor/lib/libchromatix_imx119_default_video.so
