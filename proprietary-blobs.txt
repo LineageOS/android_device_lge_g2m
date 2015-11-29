@@ -31,7 +31,6 @@ etc/firmware/a330_pfp.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
-etc/firmware/cpp_firmware_v1_2_1.fw
 
 # NFC Firmware
 etc/firmware/Signedrompatch_v20.bin
@@ -39,6 +38,16 @@ etc/firmware/Signedrompatch_v21.bin
 etc/firmware/Signedrompatch_v24.bin
 etc/firmware/Signedrompatch_v30.bin
 etc/firmware/nfc_test.bin
+
+# ACDB
+etc/acdbdata/Bluetooth_cal.acdb
+etc/acdbdata/General_cal.acdb
+etc/acdbdata/Global_cal.acdb
+etc/acdbdata/Handset_cal.acdb
+etc/acdbdata/Hdmi_cal.acdb
+etc/acdbdata/Headset_cal.acdb
+etc/acdbdata/Speaker_cal.acdb
+etc/acdbdata/workspaceFile.qwsp
 
 # Bluetooth
 bin/bdaddr_loader
@@ -72,7 +81,6 @@ vendor/lib/libmmqjpeg_codec.so
 vendor/lib/libchromatix_imx119_common.so
 vendor/lib/libchromatix_imx119_default_video.so
 vendor/lib/libchromatix_imx119_preview.so
-
 vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libmmcamera2_frame_algorithm.so
@@ -96,7 +104,6 @@ vendor/lib/libmmcamera_tintless_algo.so
 vendor/lib/libmmcamera_tintless_bg_pca_algo.so
 vendor/lib/libmmcamera_tuning.so
 vendor/lib/libmmcamera_wavelet_lib.so
-
 vendor/lib/libactuator_dw9714_camcorder.so
 vendor/lib/libactuator_dw9714_camera.so
 vendor/lib/libactuator_dw9714_imx091_camcorder.so
@@ -136,9 +143,6 @@ vendor/lib/libactuator_rohm_bu64243gwz.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 
-# FM radio
-bin/fm_qsoc_patches
-
 # Sensors
 vendor/lib/hw/sensors.msm8226.so
 vendor/lib/libsensor1.so
@@ -150,12 +154,3 @@ vendor/lib/libsensor_user_cal.so
 # just in case
 vendor/lib/libsensor_lge_cal.so
 
-# ACDB
-etc/acdbdata/Bluetooth_cal.acdb
-etc/acdbdata/General_cal.acdb
-etc/acdbdata/Global_cal.acdb
-etc/acdbdata/Handset_cal.acdb
-etc/acdbdata/Hdmi_cal.acdb
-etc/acdbdata/Headset_cal.acdb
-etc/acdbdata/Speaker_cal.acdb
-etc/acdbdata/workspaceFile.qwsp
