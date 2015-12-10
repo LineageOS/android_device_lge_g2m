@@ -59,7 +59,7 @@ lib/liblgftmitem.so
 
 # Camera
 bin/mm-qcamera-daemon
-lib/hw/camera.msm8226.so
+lib/hw/camera.vendor.msm8226.so
 lib/libmmcamera_imx179.so
 lib/libchromatix_imx179_common.so
 lib/libchromatix_imx179_default_video.so
