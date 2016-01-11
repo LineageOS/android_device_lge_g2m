@@ -38,7 +38,7 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # Common specific options
 BOARD_HAS_QCOM_WCNSS := true
-BOARD_HAS_NFC := false
+BOARD_HAS_NFC := true
 
 # Inherit from msm8226-common
 $(call inherit-product, device/lge/msm8226-common/msm8226.mk)
