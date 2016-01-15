@@ -154,3 +154,10 @@ vendor/lib/libsensor_user_cal.so
 # just in case
 vendor/lib/libsensor_lge_cal.so
 
+# adsp
+lib/rfsa/adsp/libadsp_denoise_skel.so
+lib/rfsa/adsp/libapps_mem_heap.so
+lib/rfsa/adsp/libdspCV_skel.so
+lib/rfsa/adsp/libfastcvadsp.so
+lib/rfsa/adsp/libfastcvadsp_skel.so
+lib/rfsa/adsp/libscveT2T_skel.so
