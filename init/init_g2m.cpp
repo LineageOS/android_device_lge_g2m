@@ -36,36 +36,7 @@
 #include "log.h"
 #include "util.h"
 
-
-#define CHUNK 2048 /* read 2048 bytes at a time */
-
-int check_cmdline(const char param[]) {
-
-    char buf[CHUNK];
-    FILE *file;
-    size_t nread;
-    file = fopen("/proc/cmdline", "r");
-    if (file) {
-        while ((nread = fread(buf, 1, sizeof buf, file)) > 0) {
-                /* fwrite(buf, 1, nread, stdout); */
-                char delims[] = " ";
-                char *word = NULL;
-                word = strtok(buf, delims);
-
-                while(word != NULL) {
-                        if (!strcmp(param,word)) {
-                                fclose(file);
-                                return 1;
-                        }
-                        word = strtok(NULL, delims);
-                }
-        }
-    }	
-    fclose(file);
-    return 0;
-}
-
-void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
+void vendor_load_properties()
 {
     char serial[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
@@ -78,23 +49,23 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.product.model", "LG-D618");
         property_set("ro.build.description", "g2mds_global_com-user 5.0.2 LRX22G 152311629f422 release-keys");
         property_set("ro.build.fingerprint", "lge/g2mds_global_com/g2mds:5.0.2/LRX22G/152311629f422:user/release-keys");
-	property_set("persist.radio.multisim.config", "dsds");
+        property_set("persist.radio.multisim.config", "dsds");
         property_set("persist.multisim.config", "dsds");
-	property_set("persist.radio.dont_use_dsd", "true");
-	property_set("ro.telephony.ril.config", "simactivation");
+        property_set("persist.radio.dont_use_dsd", "true");
+        property_set("ro.telephony.ril.config", "simactivation");
     } else if (strncmp(serial, "LGD610", 6) == 0) {
          /* D610 */
-	property_set("ro.product.model", "LG-D610");
-	property_set("ro.product.device", "g2mss");
+        property_set("ro.product.model", "LG-D610");
+        property_set("ro.product.device", "g2mss");
         property_set("ro.build.description", "g2mss_global_com-user 5.0.2 LRX22G 152311629f422 release-keys");
         property_set("ro.build.fingerprint", "lge/g2mss_global_com/g2mss:5.0.2/LRX22G/152311629f422:user/release-keys");
         property_set("persist.radio.multisim.config", "");
         property_set("persist.multisim.config", "");
     } else if (strncmp(serial, "LGD620", 6) == 0) {
         /* D620 */
-	property_set("ro.product.model", "LG-D620");
-	property_set("ro.product.device", "g2m");
-	property_set("ro.nfc.port", "I2C");
+        property_set("ro.product.model", "LG-D620");
+        property_set("ro.product.device", "g2m");
+        property_set("ro.nfc.port", "I2C");
         property_set("ro.build.description", "g2m_global_com-user 5.0.2 LRX22G 152311629f422 release-keys");
         property_set("ro.build.fingerprint", "lge/g2m_global_com/g2m:5.0.2/LRX22G/152311629f422:user/release-keys");
         property_set("persist.radio.multisim.config", "");
@@ -107,6 +78,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("persist.radio.multisim.config", "");
         property_set("persist.multisim.config", "");
     }
+
     property_get("ro.product.device", device);
     strlcpy(devicename, device, sizeof(devicename));
     ERROR("Found hardware id: %s setting build properties for %s device\n", serial, devicename);

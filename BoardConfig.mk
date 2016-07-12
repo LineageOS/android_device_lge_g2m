@@ -26,11 +26,11 @@
 -include device/lge/msm8226-common/BoardConfigCommon.mk
 
 # Vendor Init
-TARGET_UNIFIED_DEVICE := true
-TARGET_INIT_VENDOR_LIB := libinit_msm
-TARGET_LIBINIT_DEFINES_FILE := device/lge/g2m/init/init_g2m.cpp
+TARGET_INIT_VENDOR_LIB := libinit_g2m
 TARGET_OTA_ASSERT_DEVICE := g2m,g2mds,g2mss,d620,d618,d610
+TARGET_RECOVERY_DEVICE_MODULES := libinit_g2m
 TARGET_RELEASETOOLS_EXTENSIONS := device/lge/g2m
+TARGET_UNIFIED_DEVICE := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := g2m
