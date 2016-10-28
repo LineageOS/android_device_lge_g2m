@@ -146,7 +146,15 @@ vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 
 # Sensors
+vendor/lib/hw/sensors.msm8226.so
 vendor/lib/libsensor1.so
+vendor/lib/libsensor_reg.so
+bin/sensors.qcom
+vendor/lib/libsensor_test.so
+vendor/lib/libsensor_thresh.so
+vendor/lib/libsensor_user_cal.so
+# just in case
+vendor/lib/libsensor_lge_cal.so
 
 # adsp
 lib/rfsa/adsp/libadsp_denoise_skel.so
