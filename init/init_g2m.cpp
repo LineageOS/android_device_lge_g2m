@@ -38,12 +38,11 @@
 
 void vendor_load_properties()
 {
-    char serial[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
     char devicename[PROP_VALUE_MAX];
 
-    property_get("ro.boot.serialno", serial);
-    if (strncmp(serial, "LGD618", 6) == 0) {
+    std::string serial = property_get("ro.boot.serialno");
+
+    if (serial.substr(0,6) == "LGD618") {
         /* D618 */
         property_set("ro.product.device", "g2mds");
         property_set("ro.product.model", "LG-D618");
@@ -53,7 +52,7 @@ void vendor_load_properties()
         property_set("persist.multisim.config", "dsds");
         property_set("persist.radio.dont_use_dsd", "true");
         property_set("ro.telephony.ril.config", "simactivation");
-    } else if (strncmp(serial, "LGD610", 6) == 0) {
+    } else if (serial.substr(0,6) == "LGD610") {
          /* D610 */
         property_set("ro.product.model", "LG-D610");
         property_set("ro.product.device", "g2mss");
@@ -61,7 +60,7 @@ void vendor_load_properties()
         property_set("ro.build.fingerprint", "lge/g2mss_global_com/g2mss:5.0.2/LRX22G/152311629f422:user/release-keys");
         property_set("persist.radio.multisim.config", "");
         property_set("persist.multisim.config", "");
-    } else if (strncmp(serial, "LGD620", 6) == 0) {
+    } else if (serial.substr(0,6) == "LGD620") {
         /* D620 */
         property_set("ro.product.model", "LG-D620");
         property_set("ro.product.device", "g2m");
@@ -79,7 +78,7 @@ void vendor_load_properties()
         property_set("persist.multisim.config", "");
     }
 
-    property_get("ro.product.device", device);
-    strlcpy(devicename, device, sizeof(devicename));
-    ERROR("Found hardware id: %s setting build properties for %s device\n", serial, devicename);
+    std::string device = property_get("ro.product.device");
+    strlcpy(devicename, device.c_str(), sizeof(devicename));
+    ERROR("Found hardware id: %s setting build properties for %s device\n", serial.c_str(), devicename);
 }
