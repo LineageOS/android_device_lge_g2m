@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2015 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -36,7 +37,7 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_BOOTLOADER_BOARD_NAME := g2m
 
 # Kernel
-TARGET_KERNEL_CONFIG := g2m_cyanogenmod_defconfig
+TARGET_KERNEL_CONFIG := g2m_lineage_defconfig
 
 # Filesystem,
 BOARD_FLASH_BLOCK_SIZE := 131072
