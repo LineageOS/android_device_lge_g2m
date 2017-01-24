@@ -31,7 +31,7 @@ PRODUCT_COPY_FILES += \
 
 # OTA
 PRODUCT_COPY_FILES += \
-    device/lge/g2m/prebuilt/fixup.sh:fixup.sh
+    device/lge/g2m/releasetools/fixup.sh:install/bin/fixup.sh
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
