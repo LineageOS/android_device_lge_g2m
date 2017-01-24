@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "9a437d4f_e71638f1",
+        "filename": "releasetools/releasetools.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 4123
+      },
+      "writtenOn": "2017-01-24T21:54:03Z",
+      "side": 1,
+      "message": "whitespace",
+      "revId": "be84c627288e5df0fcc03886bf8b54516a43583d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
