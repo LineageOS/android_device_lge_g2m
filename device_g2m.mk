@@ -41,6 +41,9 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 BOARD_HAS_QCOM_WCNSS := true
 BOARD_HAS_NFC := true
 
+# IRRC
+BOARD_HAS_LG_IRRC := true
+
 # Inherit from msm8226-common
 $(call inherit-product, device/lge/msm8226-common/msm8226.mk)
 $(call inherit-product, vendor/lge/g2m/g2m-vendor.mk)
